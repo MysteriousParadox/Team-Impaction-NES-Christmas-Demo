@@ -36,8 +36,8 @@ FT_NTSC_SUPPORT			;undefine to exclude NTSC support
   .bank 0
   .org $C000
 
-  .include "sound/famitone2.asm"
-  .include "sound/music.asm"
+  .include "famitone2.asm"
+  .include "music.asm"
 
 reset:
   SEI          ; disable IRQs
@@ -204,7 +204,7 @@ sleigh:
   .db $cd, $61, $00, $28   ;sprite 3
 
 start:
-  .incbin "gfx/christmas.nam"
+  .incbin "christmas.nam"
 
 ;****************************************************************
 ;Vectors
@@ -222,4 +222,4 @@ start:
 ;****************************************************************
   .bank 2
   .org $0000
-  .incbin "gfx/christmas.chr"
+  .incbin "christmas.chr"
